@@ -1,0 +1,15 @@
+{
+  "name": "rsp-devkit",
+  "version": "1.0.0",
+  "main": "index.mjs",
+  "bin": "index.mjs",
+  "scripts": {
+    "test": "node index.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.4.1"
+  }
+}
