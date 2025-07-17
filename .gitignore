@@ -1,0 +1,6 @@
+node_modules
+dist
+fs
+child_process
+process
+package-lock.json

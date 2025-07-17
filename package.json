@@ -1,0 +1,20 @@
+{
+  "name": "rsp-develop",
+  "version": "1.0.0",
+  "main": "entry.js",
+  "type": "module",
+  "bin": {
+    "rsp-develop": "entry.js"
+  },
+  "scripts": {
+    "inst-lib": "sudo rm -rf /usr/lib/rsp/service/rsp-develop; sudo mkdir -p /usr/lib/rsp/service/rsp-develop && sudo cp -rf ./service/source/* /usr/lib/rsp/service/rsp-develop && sudo chmod 777 /usr/lib/rsp/service/rsp-develop -R",
+    "inst-svc": "sudo rm -rf /etc/systemd/user/rsp-develop.service; sudo cp -rf ./service/systemd/* /etc/systemd/user && systemctl start rsp-develop.service --user"
+  },
+  "author": "@ropsoft",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "shelljs": "^0.9.2"
+  }
+}

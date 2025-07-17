@@ -1,0 +1,23 @@
+[Unit]
+Description=rsp-develop
+After=network.target
+Documentation=man:rsp-develop(8)
+
+[Service]
+Type=exec
+WorkingDirectory=/usr/lib/rsp/service/rsp-develop
+ExecStart=/usr/bin/node /usr/lib/rsp/service/rsp-develop/index.js
+Restart=on-failure
+
+# Resource limits
+MemoryMax=512M
+CPUQuota=75%
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=rsp-develop
+LogLevelMax=warning
+
+[Install]
+WantedBy=default.target
